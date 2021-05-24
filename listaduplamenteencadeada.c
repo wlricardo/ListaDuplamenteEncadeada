@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include "listaduplamenteencadeada.h"
 
-//*****************************************************************//
-//                         FUNÇÕES                                 //
-//*****************************************************************//
+//*****************************************************************
+//                         FUNÇÕES
+//*****************************************************************
 
 /* Criar lista vazia */
 LISTA *Criar_Lista()
@@ -33,8 +33,10 @@ LISTA *Inserir_Elemento_No_Final(LISTA *l, int valor)
     LISTA *novo = (LISTA *)malloc(sizeof(LISTA));
 
     novo->Dado = valor;
-    novo->Anterior = l;
     novo->Proximo = NULL;
+    l->Proximo->Proximo = novo;
+    novo->Anterior = l->Proximo;
+    return l;
 }
 
 void Imprimir_Lista(LISTA *l)

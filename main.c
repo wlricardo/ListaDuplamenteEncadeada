@@ -15,9 +15,9 @@ int main(int argc, char const *argv[])
     Imprimir_Lista(lst);
     lst = Inserir_Elemento_No_Inicio(lst, 4);
     Imprimir_Lista(lst);
-    lst = Inserir_Elemento_No_Final(lst, 9);
+    lst = Inserir_Elemento_No_Inicio(lst, 1);
     Imprimir_Lista(lst);
-    lst = Inserir_Elemento_No_Final(lst, 0);
+    lst = Inserir_Elemento_No_Final(lst, 7);
     Imprimir_Lista(lst);
 
     return 0;
