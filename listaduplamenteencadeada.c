@@ -32,11 +32,19 @@ LISTA *Inserir_Elemento_No_Final(LISTA *l, int valor)
 {
     LISTA *novo = (LISTA *)malloc(sizeof(LISTA));
 
-    novo->Dado = valor;
+    novo->Dado=valor;
+    novo->Proximo=NULL;
+    while (l->Proximo!=NULL)
+    {
+        l=l->Proximo;
+    }
+     
+    
+    /*novo->Dado = valor;
     novo->Proximo = NULL;
     l->Proximo->Proximo = novo;
     novo->Anterior = l->Proximo;
-    return l;
+    return l;*/
 }
 
 void Imprimir_Lista(LISTA *l)
