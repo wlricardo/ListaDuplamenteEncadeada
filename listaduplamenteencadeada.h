@@ -14,7 +14,7 @@ typedef struct LISTA
 } LISTA;
 
 /*
-** FUNÇÕES AUXILIARES
+** FUNÇÕES PORINCIPAIS
 */
 
 // Função Criar_Lista
@@ -36,3 +36,14 @@ LISTA *Inserir_Elemento_No_Final(LISTA *l, int valor);
 // armazenados.
 void Imprimir_Lista(LISTA *l);
 
+/*
+** FUNÇÕES AUXILIARES
+*/
+
+// Função Menu
+// Exibe um menu de opções
+void Menu_Principal();
+
+// Função Menu_Inserir
+// Exibe o menu da opção inserir
+void Menu_Inserir();
