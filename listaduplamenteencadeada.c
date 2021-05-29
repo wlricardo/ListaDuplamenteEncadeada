@@ -62,13 +62,15 @@ void Imprimir_Lista(LISTA *l)
 {
     LISTA *aux;
 
+    printf("\n*********************************************\n");
     printf("\n Lista :");
     for (aux = l; aux != NULL; aux = aux->Proximo)
     {
         printf("%2d", aux->Dado);
     }
-    printf("\n\n");
-    system("pause");
+    printf("\n\n*********************************************\n");
+    printf("\n");
+    fflush(stdin);
 }
 
 //*****************************************************************
@@ -76,19 +78,14 @@ void Imprimir_Lista(LISTA *l)
 //*****************************************************************
 
 /* Exibe um menu de opções */
-void Menu_Principal() {
-    system("cls");
+void Menu_Principal()
+{    
     printf("\n +++ LISTA DUPLAMENTE ENCADEADA +++");
     printf("\n\n\n Selecione uma opcao: ");
-    printf("\n [1] Inserir elemento");
-    printf("\n [2] Remover elmento");
+    printf("\n [1] Inserir elemento no inicio");
+    printf("\n [2] Inserir elemento no final");
+    printf("\n [3] Remover elmento do inicio");
+    printf("\n [4] Remover elmento do final");
     printf("\n [0] Sair do programa\n >> ");
 }
 
-// Menu da opção Inserir */
-void Menu_Inserir() {
-    system("cls");
-    printf("\n --- Menu Inserir ---");
-    printf("\n [1] Inserir no inicio da lista");
-    printf("\n [2] Inserir no final da lista\n >> ");
-}

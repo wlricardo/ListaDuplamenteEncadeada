@@ -10,46 +10,41 @@ int main(int argc, char const *argv[])
 
     int numero;
     LISTA *lst;
-    int opp, ops;
+    int op;
 
     lst = Criar_Lista();
 
-    Menu_Principal();
-    scanf("%d", &opp);
-    fflush(stdin);
-
     do
     {
-        switch (opp)
+        system("cls");
+        Imprimir_Lista(lst);
+        Menu_Principal();
+        scanf("%d", &op);
+        fflush(stdin);
+
+        switch (op)
         {
         case 1:
-            Menu_Inserir();
-            scanf("%d", &ops);
-            fflush(stdin);
-
             printf("\n Elemento a ser inserido: ");
             scanf("%d", &numero);
             fflush(stdin);
-
-            switch (ops)
-            {
-            case 1:
-                lst = Inserir_Elemento_No_Inicio(lst, numero);
-                Imprimir_Lista(lst);
-                break;
-            case 2:
-                lst = Inserir_Elemento_No_Final(lst, numero);
-                Imprimir_Lista(lst);
-                break;
-            default:
-                printf("\n Opcao invalida");
-                break;
-            }
+            lst = Inserir_Elemento_No_Inicio(lst, numero);
+            break;
+        case 2:
+            printf("\n Elemento a ser inserido: ");
+            scanf("%d", &numero);
+            fflush(stdin);
+            lst = Inserir_Elemento_No_Final(lst, numero);
             break;
         default:
+            if (op < 0 || op > 4)
+            {
+                printf("\n Opcao invalida...");
+            }
+
             break;
         }
-    } while (opp != 0);
+    } while (op != 0);
 
     /*lst = Criar_Lista();
     Imprimir_Lista(lst);

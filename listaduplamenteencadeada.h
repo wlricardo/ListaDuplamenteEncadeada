@@ -44,6 +44,3 @@ void Imprimir_Lista(LISTA *l);
 // Exibe um menu de opções
 void Menu_Principal();
 
-// Função Menu_Inserir
-// Exibe o menu da opção inserir
-void Menu_Inserir();
